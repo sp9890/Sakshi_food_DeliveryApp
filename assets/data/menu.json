@@ -1,0 +1,1382 @@
+[
+ {
+   "Category": "Hot Beverages",
+   "Food Name": "Tea",
+   "Price (?)": 20,
+   "Basic Ingredients": "Milk, Sugar, Tea Leaves/Coffee Beans"
+ },
+ {
+   "Category": "Hot Beverages",
+   "Food Name": "Nescoffee",
+   "Price (?)": 35,
+   "Basic Ingredients": "Milk, Sugar, Tea Leaves/Coffee Beans"
+ },
+ {
+   "Category": "Hot Beverages",
+   "Food Name": "Hot Chocolete",
+   "Price (?)": 50,
+   "Basic Ingredients": "Milk, Sugar, Tea Leaves/Coffee Beans"
+ },
+ {
+   "Category": "Bread Items",
+   "Food Name": "Tost Butter",
+   "Price (?)": 40,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Bread Items",
+   "Food Name": "Bread Butter",
+   "Price (?)": 40,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Misal Pav",
+   "Price (?)": 70,
+   "Basic Ingredients": "Sprouts Moth Beans, Spices, Farsan, Onion, Lemon, Pav"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Dahi Misal Pav",
+   "Price (?)": 80,
+   "Basic Ingredients": "Sprouts Moth Beans, Spices, Farsan, Onion, Lemon, Pav"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Puri Bhaji",
+   "Price (?)": 80,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Finger Chips",
+   "Price (?)": 90,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Chilly Cheese Toast",
+   "Price (?)": 100,
+   "Basic Ingredients": "Bread Slices, Butter, Mixed Vegetables, Cheese (if requested)"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Chole Batura",
+   "Price (?)": 110,
+   "Basic Ingredients": "Chickpeas, Onion, Tomato, Indian Spices"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Sabudana Wada",
+   "Price (?)": 60,
+   "Basic Ingredients": "Tapioca Pearls, Peanuts, Potato, Green Chillies"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Sabudana Khichadi",
+   "Price (?)": 70,
+   "Basic Ingredients": "Tapioca Pearls, Peanuts, Potato, Green Chillies"
+ },
+ {
+   "Category": "Snacks",
+   "Food Name": "Kanda Bhaji",
+   "Price (?)": 80,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Sandwiches",
+   "Food Name": "Veg Sandwich",
+   "Price (?)": 70,
+   "Basic Ingredients": "Bread Slices, Butter, Mixed Vegetables, Cheese (if requested)"
+ },
+ {
+   "Category": "Sandwiches",
+   "Food Name": "Veg Grilled Sandwich",
+   "Price (?)": 80,
+   "Basic Ingredients": "Bread Slices, Butter, Mixed Vegetables, Cheese (if requested)"
+ },
+ {
+   "Category": "Sandwiches",
+   "Food Name": "Cheese Sandwich",
+   "Price (?)": 90,
+   "Basic Ingredients": "Bread Slices, Butter, Mixed Vegetables, Cheese (if requested)"
+ },
+ {
+   "Category": "Sandwiches",
+   "Food Name": "Veg Cheese Grilled Sandwich",
+   "Price (?)": 100,
+   "Basic Ingredients": "Bread Slices, Butter, Mixed Vegetables, Cheese (if requested)"
+ },
+ {
+   "Category": "Pizza",
+   "Food Name": "Veg Cheese Pizza",
+   "Price (?)": 170,
+   "Basic Ingredients": "Pizza Base, Mozzarella Cheese, Pizza Sauce, Mixed Veggies"
+ },
+ {
+   "Category": "Pizza",
+   "Food Name": "Cheese Pizza",
+   "Price (?)": 180,
+   "Basic Ingredients": "Pizza Base, Mozzarella Cheese, Pizza Sauce, Mixed Veggies"
+ },
+ {
+   "Category": "Pizza",
+   "Food Name": "Maxican Pizza",
+   "Price (?)": 200,
+   "Basic Ingredients": "Pizza Base, Mozzarella Cheese, Pizza Sauce, Mixed Veggies"
+ },
+ {
+   "Category": "Pizza",
+   "Food Name": "Paneer Pizza",
+   "Price (?)": 200,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Pizza",
+   "Food Name": "Paneer Tikka Pizza",
+   "Price (?)": 200,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Pav Bhaji",
+   "Food Name": "Pav Bhaji",
+   "Price (?)": 100,
+   "Basic Ingredients": "Pav Bread, Mashed Mixed Vegetables (Potato, Tomato, Peas), Butter, Pav Bhaji Masala"
+ },
+ {
+   "Category": "Pav Bhaji",
+   "Food Name": "Cheese Pav Bhaji",
+   "Price (?)": 110,
+   "Basic Ingredients": "Pav Bread, Mashed Mixed Vegetables (Potato, Tomato, Peas), Butter, Pav Bhaji Masala"
+ },
+ {
+   "Category": "Pav Bhaji",
+   "Food Name": "Extra Pav (2 Nos)",
+   "Price (?)": 20,
+   "Basic Ingredients": "Pav Bread, Mashed Mixed Vegetables (Potato, Tomato, Peas), Butter, Pav Bhaji Masala"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Tomato Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Tomato Pundina Shorba",
+   "Price (?)": 100,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Cream of Mashroom Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Minestrone Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Veg Manchow Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Veg Hot & Sour Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Veg Noodles Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Veg Clear Soup",
+   "Price (?)": 90,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Combination Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Soups",
+   "Food Name": "Lemon Coriander Soup",
+   "Price (?)": 100,
+   "Basic Ingredients": "Vegetable Broth, Mixed Chopped Veggies, Spices, Cornflour"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Veg Machuran Dry",
+   "Price (?)": 180,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Veg 65",
+   "Price (?)": 180,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Veg Spring Roll",
+   "Price (?)": 210,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Chilly Dry",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Bun Garlic Sauce",
+   "Price (?)": 220,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Manchurian Dry",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Limon Dry",
+   "Price (?)": 200,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Baby Corn Chilly",
+   "Price (?)": 180,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Stick In Schezwan",
+   "Price (?)": 220,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Hot Pan",
+   "Price (?)": 210,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Cheese Ball",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Veg Crispy",
+   "Price (?)": 200,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Chinese Bhel",
+   "Price (?)": 170,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Pataya",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer Ginger Dry",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chinese Starter",
+   "Food Name": "Paneer 65",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Kurkuri Tikki",
+   "Price (?)": 200,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Karari Bhindi",
+   "Price (?)": 170,
+   "Basic Ingredients": "Okra/Ladyfinger, Onion, Tomato, Spices"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Paneer Pakoda",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Paneer Koliwada",
+   "Price (?)": 190,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Cheese Cherry Pineapple Sticks",
+   "Price (?)": 200,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Harabhara Kababa",
+   "Price (?)": 200,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Indian Starter",
+   "Food Name": "Cheese Ball",
+   "Price (?)": 200,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Paneer Tikka",
+   "Price (?)": 220,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Veg Seekh Kabab",
+   "Price (?)": 220,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Tandoori Manchurian",
+   "Price (?)": 230,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Paneer Achari Tikka",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Paneer Pudina Tikka",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Tandoor Starter",
+   "Food Name": "Hilltop Paneer",
+   "Price (?)": 250,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Aloo Jeera",
+   "Price (?)": 180,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Aloo Methi",
+   "Price (?)": 200,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Aloo Mutter",
+   "Price (?)": 200,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Aloo Palak",
+   "Price (?)": 190,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Bhendi Masala",
+   "Price (?)": 200,
+   "Basic Ingredients": "Okra/Ladyfinger, Onion, Tomato, Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Bhendi Nayantara",
+   "Price (?)": 200,
+   "Basic Ingredients": "Okra/Ladyfinger, Onion, Tomato, Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Chana Peshawari",
+   "Price (?)": 200,
+   "Basic Ingredients": "Chickpeas, Onion, Tomato, Indian Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Dum Aloo Banarasi",
+   "Price (?)": 200,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Dum Aloo Jaipuri",
+   "Price (?)": 200,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Dum Aloo Panjabi",
+   "Price (?)": 200,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Green Peas Masala",
+   "Price (?)": 200,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Kadai Veg",
+   "Price (?)": 220,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Kadai Veg Kheema",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Kaju Curry",
+   "Price (?)": 250,
+   "Basic Ingredients": "Cashews, Onion, Tomato, Cream, Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Kaju Masala",
+   "Price (?)": 260,
+   "Basic Ingredients": "Cashews, Onion, Tomato, Cream, Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Kaju Paneer Masala",
+   "Price (?)": 260,
+   "Basic Ingredients": "Cashews, Onion, Tomato, Cream, Spices"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Lasooni Methi",
+   "Price (?)": 210,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Mix Vegetable",
+   "Price (?)": 210,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Nijami Handi",
+   "Price (?)": 250,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Peshawari Kofta",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Punjabi Tawa",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Mushroom Masala",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Mashroom Chatpata",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Vegetarian Speciality",
+   "Food Name": "Mashroom Tikka Masala",
+   "Price (?)": 240,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Palak Paneer",
+   "Price (?)": 210,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Kadai Paneer",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Achari Tikka Masala",
+   "Price (?)": 240,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneera Butter Masala",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Bhurji",
+   "Price (?)": 250,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Chatka",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneera Chatpata",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneera Laziz",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneera Lazzatdar",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneera Makhamali (Sweet)",
+   "Price (?)": 240,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Mutter Paneer",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Masala",
+   "Price (?)": 220,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Pudina Tikka Masala",
+   "Price (?)": 250,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Sultana",
+   "Price (?)": 250,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Tawa Masala",
+   "Price (?)": 240,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Tikka Masala",
+   "Price (?)": 240,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Paneer Specility",
+   "Food Name": "Paneer Tufani",
+   "Price (?)": 240,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Adraki",
+   "Price (?)": 220,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Angara",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Baigam Bahar",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Banjara Masala",
+   "Price (?)": 240,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Bhuna Masala",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Chatpata",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Chilly Milly",
+   "Price (?)": 220,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Handi",
+   "Price (?)": 240,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Jaipuri (Sweet)",
+   "Price (?)": 240,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Kolhapuri",
+   "Price (?)": 220,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Lazzatdar",
+   "Price (?)": 220,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Malai Kofta (Sweet)",
+   "Price (?)": 250,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Maratha",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Patiyala",
+   "Price (?)": 250,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Puneri",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Tadkewala",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Tawa Masala",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Krishnaleela Speciality",
+   "Food Name": "Veg Hyderabadi",
+   "Price (?)": 230,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Paneer Lababdar",
+   "Price (?)": 320,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Veg Dilruba",
+   "Price (?)": 310,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Cheese Angori",
+   "Price (?)": 320,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Nawabi Paneer",
+   "Price (?)": 330,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Paneer Rajwada",
+   "Price (?)": 330,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Angori Kofta",
+   "Price (?)": 330,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Krishnaleela Special Paneera",
+   "Price (?)": 330,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Paneer Chaman Bahar",
+   "Price (?)": 320,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Veg Malwani",
+   "Price (?)": 370,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Paneer Malwani",
+   "Price (?)": 390,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Chef Special",
+   "Food Name": "Special Khjana",
+   "Price (?)": 390,
+   "Basic Ingredients": "Mixed Vegetables/Kofta, Onion-Tomato Gravy, Cashew Paste, Spices, Oil/Ghee"
+ },
+ {
+   "Category": "Veg Lunch",
+   "Food Name": "Veg Thali (Aloo Jeera/Mixveg/Matki)",
+   "Price (?)": 220,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Veg Lunch",
+   "Food Name": "Spl Veg Thali (Aloo Jeera/Mixveg/Paneer)",
+   "Price (?)": 250,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Dal Preparation",
+   "Food Name": "Dal Fry",
+   "Price (?)": 120,
+   "Basic Ingredients": "Yellow Lentils/Toor Dal, Spices, Ghee/Oil, Garlic, Cumin"
+ },
+ {
+   "Category": "Dal Preparation",
+   "Food Name": "Dal Tadaka",
+   "Price (?)": 130,
+   "Basic Ingredients": "Yellow Lentils/Toor Dal, Spices, Ghee/Oil, Garlic, Cumin"
+ },
+ {
+   "Category": "Dal Preparation",
+   "Food Name": "Dal Kolhapuri",
+   "Price (?)": 140,
+   "Basic Ingredients": "Yellow Lentils/Toor Dal, Spices, Ghee/Oil, Garlic, Cumin"
+ },
+ {
+   "Category": "Dal Preparation",
+   "Food Name": "Dal Haydrabadi",
+   "Price (?)": 150,
+   "Basic Ingredients": "Yellow Lentils/Toor Dal, Spices, Ghee/Oil, Garlic, Cumin"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Plain Rice",
+   "Price (?)": 100,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Half Rice",
+   "Price (?)": 70,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Jeera Rice Full",
+   "Price (?)": 120,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Jeera Rice Half",
+   "Price (?)": 90,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Yellow Lemon Rice",
+   "Price (?)": 120,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Curd Rice",
+   "Price (?)": 140,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Dal Khichadi",
+   "Price (?)": 180,
+   "Basic Ingredients": "Yellow Lentils/Toor Dal, Spices, Ghee/Oil, Garlic, Cumin"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Veg Pulav",
+   "Price (?)": 160,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Green Peas Pulav",
+   "Price (?)": 170,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Paneer Pulav",
+   "Price (?)": 180,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Kashmiri Pulav (Sweet)",
+   "Price (?)": 180,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Paneer Biryani",
+   "Price (?)": 230,
+   "Basic Ingredients": "Paneer (Cottage Cheese), Onion, Tomato, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Veg Biryani",
+   "Price (?)": 220,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Rice Preparation",
+   "Food Name": "Spl Biryani",
+   "Price (?)": 270,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Greena Salad",
+   "Price (?)": 80,
+   "Basic Ingredients": "Cucumber, Tomato, Onion, Yogurt (for Raita), Herbs"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Rosted Papad",
+   "Price (?)": 30,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Fried Papad",
+   "Price (?)": 30,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Masala Papad",
+   "Price (?)": 40,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Plain Curd",
+   "Price (?)": 70,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Salad/Papad/Raita",
+   "Food Name": "Veg Raita",
+   "Price (?)": 80,
+   "Basic Ingredients": "Cucumber, Tomato, Onion, Yogurt (for Raita), Herbs"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Wheat Roti",
+   "Price (?)": 20,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Wheat Butter Roti",
+   "Price (?)": 25,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Roti",
+   "Price (?)": 20,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Butter Roti",
+   "Price (?)": 25,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Missi Roti",
+   "Price (?)": 50,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Nan",
+   "Price (?)": 40,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Butter Nan",
+   "Price (?)": 50,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Lasooni Nan",
+   "Price (?)": 60,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Paratha",
+   "Price (?)": 40,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Butter Paratha",
+   "Price (?)": 50,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Kulcha",
+   "Price (?)": 30,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Butter Kulcha",
+   "Price (?)": 40,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Chapati",
+   "Price (?)": 20,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Aloo Paratha",
+   "Price (?)": 90,
+   "Basic Ingredients": "Potatoes, Indian Spices, Herbs, Oil"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Assorted Roti Basket",
+   "Price (?)": 180,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Stuff Paratha",
+   "Price (?)": 100,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Stuff Kulcha",
+   "Price (?)": 100,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Laccha Paratha",
+   "Price (?)": 50,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Cheese Nan",
+   "Price (?)": 75,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Indian Breads",
+   "Food Name": "Cheese Garlic Nan",
+   "Price (?)": 80,
+   "Basic Ingredients": "Wheat Flour/Maida, Water, Salt, Butter/Ghee"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Fried Rice",
+   "Price (?)": 170,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Schezwan Rice",
+   "Price (?)": 180,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Singapori Fried Rice",
+   "Price (?)": 190,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Tripple Rice (With Greavy)",
+   "Price (?)": 230,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Manchurian Rice (With Greavy)",
+   "Price (?)": 230,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Vegt Hakka Noodles",
+   "Price (?)": 170,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Schezwan Noodles",
+   "Price (?)": 190,
+   "Basic Ingredients": "Cabbage, Carrots, Capsicum, Soy Sauce, Noodles/Batter, Spices"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Veg Combination Rice",
+   "Price (?)": 190,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "American Fried Rice",
+   "Price (?)": 190,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Noodles & Rice",
+   "Food Name": "Shrilankhan Fried Rice",
+   "Price (?)": 190,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Seet Lime/Mosambi",
+   "Price (?)": 70,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Orance Juice",
+   "Price (?)": 70,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Apple Juice",
+   "Price (?)": 90,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Paneepple Juice",
+   "Price (?)": 90,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Water Melon (Sesonal)",
+   "Price (?)": 70,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Fresh Lime Water",
+   "Price (?)": 30,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Juice",
+   "Food Name": "Fresh Lime Soda",
+   "Price (?)": 40,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Soft Drinks",
+   "Food Name": "Soft Drinks",
+   "Price (?)": 50,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Soft Drinks",
+   "Food Name": "300 ml Soda",
+   "Price (?)": 20,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Soft Drinks",
+   "Food Name": "Jaljeera Soda",
+   "Price (?)": 40,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Soft Drinks",
+   "Food Name": "Mineral Water",
+   "Price (?)": 20,
+   "Basic Ingredients": "Fresh Fruit Extract/Concentrate, Sugar, Water/Soda"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Vanilla",
+   "Price (?)": 70,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Strawberry",
+   "Price (?)": 70,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Butter Scotch",
+   "Price (?)": 80,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Chocolate",
+   "Price (?)": 80,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Mango Ice-Creame",
+   "Price (?)": 80,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Mango Mastani",
+   "Price (?)": 120,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Dry Fruit Mastani",
+   "Price (?)": 130,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Ice-Creams/Sundaes",
+   "Food Name": "Butter Scotch Mastani",
+   "Price (?)": 120,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Deserts/Salad",
+   "Food Name": "Gulab Jamun",
+   "Price (?)": 50,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Deserts/Salad",
+   "Food Name": "Hot Gulab Jamun With Ice-Cream",
+   "Price (?)": 60,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Deserts/Salad",
+   "Food Name": "Fresh Fruit Salad",
+   "Price (?)": 100,
+   "Basic Ingredients": "Cucumber, Tomato, Onion, Yogurt (for Raita), Herbs"
+ },
+ {
+   "Category": "Deserts/Salad",
+   "Food Name": "Fresh Fruit Salad With Ice-Cream",
+   "Price (?)": 120,
+   "Basic Ingredients": "Milk, Fresh Cream, Sugar, Artificial/Natural Flavors"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Sweet Lassi",
+   "Price (?)": 70,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Salted Lassi",
+   "Price (?)": 70,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Mango Lassi",
+   "Price (?)": 80,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Chaas",
+   "Price (?)": 40,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Masala Chaas",
+   "Price (?)": 50,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Dry Fruit Lassi",
+   "Price (?)": 90,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Cold Beverages",
+   "Food Name": "Strawberry Lassi",
+   "Price (?)": 70,
+   "Basic Ingredients": "Yogurt/Curd, Sugar/Salt, Spices/Flavorings"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Vanilla Milk Shanke",
+   "Price (?)": 90,
+   "Basic Ingredients": "Specific raw ingredients based on dish, Spices, Oil/Butter"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Chocolete Milk Shake",
+   "Price (?)": 90,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Butter Schotch Milk Shake",
+   "Price (?)": 90,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Dry Fruit Milk Shake",
+   "Price (?)": 120,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Cold Coffee Shake",
+   "Price (?)": 90,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Mango Milk Shake",
+   "Price (?)": 100,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Milk Shakes",
+   "Food Name": "Strawberry Milk Shake",
+   "Price (?)": 90,
+   "Basic Ingredients": "Milk, Sugar, Ice Cream, Fruit/Flavor Extract"
+ },
+ {
+   "Category": "Party Menu",
+   "Food Name": "Party Menu (Mix Veg / Panner / Roti / Rice / Dal / Sweet)",
+   "Price (?)": 290,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ },
+ {
+   "Category": "Party Menu",
+   "Food Name": "Party Menu (Soup / Starter / Mix Veg / Panner / Roti / Rice / Dal Salad / Sweet)",
+   "Price (?)": 390,
+   "Basic Ingredients": "Basmati Rice, Whole Spices, Herbs, Mixed Vegetables"
+ }
+]

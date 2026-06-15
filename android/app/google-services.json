@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "715425486283",
+    "project_id": "krushnlila-food-delivery",
+    "storage_bucket": "krushnlila-food-delivery.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715425486283:android:29067d3728d0682038924e",
+        "android_client_info": {
+          "package_name": "com.k"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJOZqQiW9qRFRByDfpFw3wUSe_hEQ8eWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715425486283:android:068c5a77e0a512ba38924e",
+        "android_client_info": {
+          "package_name": "com.krushlila.fooddelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJOZqQiW9qRFRByDfpFw3wUSe_hEQ8eWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
