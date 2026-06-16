@@ -9,6 +9,9 @@ import '../../services/order_service.dart';
 import '../../common/cart_service.dart';
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+
 
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
@@ -25,6 +28,52 @@ class _CheckoutViewState extends State<CheckoutView> {
   ];
 
   int selectMethod = 0;
+
+  String customerName = "";
+  String customerPhone = "";
+  String customerAddress = "";
+
+
+double subtotal = 0;
+double deliveryFee = 40;
+double total = 0;
+
+
+  Future<void> loadProfile() async {
+  final doc = await FirebaseFirestore.instance
+      .collection("users")
+      .doc("customer_profile")
+      .get();
+
+  if (doc.exists) {
+    setState(() {
+      customerName = doc["name"] ?? "";
+      customerPhone = doc["phone"] ?? "";
+      customerAddress = doc["address"] ?? "";
+    });
+  }
+}
+
+@override
+void initState() {
+  super.initState();
+  loadProfile();
+  calculateTotals();
+
+}
+
+
+
+ void calculateTotals() {
+    subtotal = 0;
+
+    for (var item in CartService.cartItems) {
+      subtotal += item.price * item.qty;
+    }
+
+    total = subtotal + deliveryFee;
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -83,15 +132,58 @@ class _CheckoutViewState extends State<CheckoutView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Expanded(
-                          child: Text(
-                            "653 Nostrand Ave.\nBrooklyn, NY 11216",
-                            style: TextStyle(
-                                color: TColor.primaryText,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w700),
-                          ),
-                        ),
+                        // Expanded(
+                        //   child: Text(
+                        //     "653 Nostrand Ave.\nBrooklyn, NY 11216",
+                        //     style: TextStyle(
+                        //         color: TColor.primaryText,
+                        //         fontSize: 15,
+                        //         fontWeight: FontWeight.w700),
+                        //   ),
+                        // ),
+                         
+
+
+                         Expanded(
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+
+      Text(
+        customerName,
+        style: TextStyle(
+          color: TColor.primaryText,
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+
+      const SizedBox(height: 4),
+
+      Text(
+        customerPhone,
+        style: TextStyle(
+          color: TColor.primaryText,
+          fontSize: 13,
+        ),
+      ),
+
+      const SizedBox(height: 4),
+
+      Text(
+        customerAddress,
+        style: TextStyle(
+          color: TColor.primaryText,
+          fontSize: 14,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    ],
+  ),
+),
+
+
+
                         const SizedBox(
                           width: 4,
                         ),
@@ -234,7 +326,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                          "₹68",
+                          "₹${subtotal.toStringAsFixed(0)}",
 
                           style: TextStyle(
                               color: TColor.primaryText,
@@ -258,7 +350,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                          "₹2",
+                          "₹${deliveryFee.toStringAsFixed(0)}",
 
                           style: TextStyle(
                               color: TColor.primaryText,
@@ -270,30 +362,30 @@ class _CheckoutViewState extends State<CheckoutView> {
                     const SizedBox(
                       height: 8,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Discount",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: TColor.primaryText,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Text(
-                          "-₹4",
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: [
+                    //     Text(
+                    //       "Discount",
+                    //       textAlign: TextAlign.center,
+                    //       style: TextStyle(
+                    //           color: TColor.primaryText,
+                    //           fontSize: 13,
+                    //           fontWeight: FontWeight.w500),
+                    //     ),
+                    //     Text(
+                    //       "₹${total.toStringAsFixed(0)}",
 
-                          style: TextStyle(
-                              color: TColor.primaryText,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
+                    //       style: TextStyle(
+                    //           color: TColor.primaryText,
+                    //           fontSize: 13,
+                    //           fontWeight: FontWeight.w700),
+                    //     )
+                    //   ],
+                    // ),
+                    // const SizedBox(
+                    //   height: 15,
+                    // ),
                     Divider(
                       color: TColor.secondaryText.withValues(alpha: 0.5),
                       height: 1,
@@ -313,7 +405,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                          "₹66",
+                            "₹${total.toStringAsFixed(0)}",
 
                           style: TextStyle(
                               color: TColor.primaryText,
@@ -364,6 +456,12 @@ class _CheckoutViewState extends State<CheckoutView> {
     total: total,
   );
 
+
+CartService.cartItems.clear();
+
+calculateTotals();
+
+setState(() {});
                       showModalBottomSheet(
                           context: context,
                           backgroundColor: Colors.transparent,
