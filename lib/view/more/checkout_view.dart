@@ -16,16 +16,26 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
 
+
+
   @override
   State<CheckoutView> createState() => _CheckoutViewState();
 }
 
 class _CheckoutViewState extends State<CheckoutView> {
   List paymentArr = [
-    {"name":"Cash on delivery (Pay at Doorstep)","icon":"assets/img/rupee.png"},
+    {"name":"Cash on delivery (Pay at Doorstep)","icon":"assets/img/rupee.png",
     // {"name": "**** **** **** 2187", "icon": "assets/img/visa_icon.png"},
     // {"name": "test@gmail.com", "icon": "assets/img/paypal.png"},
+
+      "name": "Cash on delivery (Pay at Doorstep)",
+      "icon": "assets/img/rupee.png",
+
+      },
+     
   ];
+
+ 
 
   int selectMethod = 0;
 
@@ -38,8 +48,31 @@ double subtotal = 0;
 double deliveryFee = 40;
 double total = 0;
 
+ 
 
-  Future<void> loadProfile() async {
+//   Future<void> loadProfile() async {
+//   final doc = await FirebaseFirestore.instance
+//       .collection("users")
+//       .doc("customer_profile")
+//       .get();
+
+//   if (doc.exists) {
+//     setState(() {
+//       customerName = doc["name"] ?? "";
+//       customerPhone = doc["phone"] ?? "";
+//       customerAddress = doc["address"] ?? "";
+//     });
+//   }
+// }
+
+@override
+void initState() {
+  super.initState();
+  loadProfile();
+  calculateTotals();
+
+}
+Future<void> loadProfile() async {
   final doc = await FirebaseFirestore.instance
       .collection("users")
       .doc("customer_profile")
@@ -52,14 +85,6 @@ double total = 0;
       customerAddress = doc["address"] ?? "";
     });
   }
-}
-
-@override
-void initState() {
-  super.initState();
-  loadProfile();
-  calculateTotals();
-
 }
 
 
@@ -432,29 +457,42 @@ void initState() {
                     onPressed: () async {
                       
   List<Map<String, dynamic>> orderItems = [];
-
   double subtotal = 0;
-
   for (var item in CartService.cartItems) {
     orderItems.add({
       "name": item.name,
       "price": item.price,
       "qty": item.qty,
+      "image": item.image,
     });
 
-    subtotal += item.price * item.qty;
-  }
-
+    subtotal += item.price * item.qty; }
   double deliveryFee = 40;
-
   double total = subtotal + deliveryFee;
+  // await OrderService.saveOrder(
+  //   items: orderItems,
+  //   subtotal: subtotal,
+  //   deliveryFee: deliveryFee,
+  //   total: total,
+  // );
+  
+  print("Cart Items Count: ${CartService.cartItems.length}");
+  print(CartService.cartItems);
+  print("ORDER ITEMS BEFORE SAVE = $orderItems");
+
+  
+  print("ORDER ITEMS = $orderItems");
+  print("SUBTOTAL = $subtotal");
 
   await OrderService.saveOrder(
-    items: orderItems,
-    subtotal: subtotal,
-    deliveryFee: deliveryFee,
-    total: total,
-  );
+  items: orderItems,
+  subtotal: subtotal,
+  deliveryFee: deliveryFee,
+  total: total,
+  customerName: customerName,
+  phone: customerPhone,
+  address: customerAddress,
+);
 
 
 CartService.cartItems.clear();

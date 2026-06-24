@@ -9,6 +9,7 @@ class RoundTextfield extends StatelessWidget {
   final bool obscureText;
   final Color? bgColor;
   final Widget? left;
+  final ValueChanged<String>? onChanged;
 
   const RoundTextfield(
       {super.key,
@@ -17,7 +18,8 @@ class RoundTextfield extends StatelessWidget {
       this.keyboardType,
       this.bgColor,
       this.left,
-      this.obscureText = false});
+      this.obscureText = false,
+      this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +42,7 @@ class RoundTextfield extends StatelessWidget {
               controller: controller,
               obscureText: obscureText,
               keyboardType: keyboardType,
+              onChanged: onChanged,
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20),
                 enabledBorder: InputBorder.none,
@@ -66,6 +69,7 @@ class RoundTitleTextfield extends StatelessWidget {
   final bool obscureText;
   final Color? bgColor;
   final Widget? left;
+  final Function(String)? onChanged;
 
   const RoundTitleTextfield(
       {super.key,
@@ -75,7 +79,10 @@ class RoundTitleTextfield extends StatelessWidget {
       this.keyboardType,
       this.bgColor,
       this.left,
-      this.obscureText = false});
+      this.onChanged,
+  this.obscureText = false,
+     
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +112,7 @@ class RoundTitleTextfield extends StatelessWidget {
                     controller: controller,
                     obscureText: obscureText,
                     keyboardType: keyboardType,
+                    onChanged: onChanged,
                     decoration: InputDecoration(
                       contentPadding:
                           const EdgeInsets.symmetric(horizontal: 20),

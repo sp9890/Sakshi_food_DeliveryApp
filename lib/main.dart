@@ -17,9 +17,29 @@ import 'firebase_options.dart';
 
 
 import 'package:food_delivery/view/on_boarding/startup_view.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:food_delivery/view/login/phone_login_view.dart';
 
+//import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 SharedPreferences? prefs;
+
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+    FlutterLocalNotificationsPlugin();
+
+Future<void> _firebaseMessagingBackgroundHandler(
+    RemoteMessage message) async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+    }
+  
+
 void main() async {
   
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,6 +47,36 @@ void main() async {
    await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  FirebaseMessaging.onBackgroundMessage(
+  _firebaseMessagingBackgroundHandler,
+);
+
+FirebaseMessaging.onMessage.listen(
+  (RemoteMessage message) {
+    print("TITLE: ${message.notification?.title}");
+    print("BODY: ${message.notification?.body}");
+  },
+);
+
+
+   await FirebaseMessaging.instance.requestPermission(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+
+  String? token =
+      await FirebaseMessaging.instance.getToken();
+
+  print("FCM TOKEN = $token");
+  
+   await FirebaseFirestore.instance
+    .collection("users")
+    .doc("customer_profile")
+    .update({
+  "fcmToken": token,
+});
+
    setUpLocator();
   HttpOverrides.global = MyHttpOverrides();
 

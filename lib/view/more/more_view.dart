@@ -7,6 +7,7 @@ import '../../common/color_extension.dart';
 import '../../common/service_call.dart';
 import 'my_order_view.dart';
 import 'notification_view.dart';
+import 'my_orders_history_view.dart';
 
 class MoreView extends StatefulWidget {
   const MoreView({super.key});
@@ -84,7 +85,7 @@ class _MoreViewState extends State<MoreView> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MyOrderView()));
+                                builder: (context) => const MyOrdersHistoryView()));
                       },
                       icon: Image.asset(
                         "assets/img/shopping_cart.png",
@@ -119,7 +120,7 @@ class _MoreViewState extends State<MoreView> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const MyOrderView()));
+                                    builder: (context) => const MyOrdersHistoryView()));     
                           case "3":
                             Navigator.push(
                                 context,

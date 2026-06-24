@@ -5,6 +5,7 @@ import 'package:food_delivery/common_widget/round_button.dart';
 import 'checkout_view.dart';
 
 import '../../common/cart_service.dart';
+import 'my_order_view.dart';
 
 
 
@@ -197,8 +198,8 @@ class _MyOrderViewState extends State<MyOrderView> {
               //   ),
               // ),
                
-               Padding(
-                  padding: const EdgeInsets.symmetric(
+               const Padding(
+               padding: EdgeInsets.symmetric(
                horizontal: 20,
               vertical: 10,
                     ),

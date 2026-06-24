@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:google_places_flutter/google_places_flutter.dart';
+import 'add_address_view.dart';
 
 class LocationSelectionView extends StatefulWidget {
   const LocationSelectionView({super.key});
@@ -21,17 +23,19 @@ class _LocationSelectionViewState
       TextEditingController();
 
         String currentLocation = "Detecting location...";
+        bool isLoadingLocation = true;
+        List<String> savedAddresses = [];
 
           @override
   void initState() {
     super.initState();
     getCurrentLocation();
+     loadSavedAddresses();
   }
 
   Future<void> getCurrentLocation() async {
-
-    Position position =
-        await Geolocator.getCurrentPosition(
+  try {
+    Position position = await Geolocator.getCurrentPosition(
       locationSettings: const LocationSettings(
         accuracy: LocationAccuracy.high,
       ),
@@ -45,11 +49,42 @@ class _LocationSelectionViewState
 
     Placemark place = placemarks.first;
 
+     String location =
+        // "${place.locality}, ${place.administrativeArea}";
+        "${place.subLocality}, ${place.locality}, ${place.administrativeArea}";
+
+
     setState(() {
       currentLocation =
-          "${place.locality}, ${place.administrativeArea}";
+         // "${place.locality}, ${place.administrativeArea}";
+           currentLocation = location;
+          isLoadingLocation = false;
     });
+    SharedPreferences prefs =
+        await SharedPreferences.getInstance();
+
+    await prefs.setString(
+      "user_location",
+      location,
+    );
+
+  } catch (e) {
+    print(e);
   }
+} 
+Future<void> loadSavedAddresses() async {
+
+  SharedPreferences prefs =
+      await SharedPreferences.getInstance();
+
+  setState(() {
+    savedAddresses =
+        prefs.getStringList(
+              "saved_addresses",
+            ) ??
+            [];
+  });
+}
 
   @override
   Widget build(BuildContext context) {
@@ -93,28 +128,73 @@ class _LocationSelectionViewState
 
                 const SizedBox(height: 20),
 
-                Container(
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius:
-                        BorderRadius.circular(15),
-                  ),
-                  child: TextField(
-                    controller: searchController,
-                    decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      prefixIcon: Icon(
-                        Icons.search,
-                        color: Colors.green,
-                        size: 32,
-                      ),
-                      hintText:
-                          "Search for area, street name...",
-                    ),
-                  ),
-                ),
+                // Container(
+                //   height: 60,
+                //   decoration: BoxDecoration(
+                //     color: Colors.white,
+                //     borderRadius:
+                //         BorderRadius.circular(15),
+                //   ),
+                //   child: TextField(
+                //     controller: searchController,
+                //     decoration: const InputDecoration(
+                //       border: InputBorder.none,
+                //       prefixIcon: Icon(
+                //         Icons.search,
+                //         color: Colors.green,
+                //         size: 32,
+                //       ),
+                //       hintText:
+                //           "Search for area, street name...",
+                //     ),
+                //   ),
+                // ),
 
+Container(
+  height:60,
+  padding:const EdgeInsets.symmetric(horizontal: 10),
+  decoration:BoxDecoration(
+    color:Colors.white,
+    borderRadius:BorderRadius.circular(15),
+  ),
+
+          child:GooglePlaceAutoCompleteTextField(
+  textEditingController: searchController,
+  googleAPIKey: "AIzaSyDQhcfL8O0ijiEmDKr6XYobwHujKA5Wh7E",
+
+  inputDecoration: const InputDecoration(
+    border: InputBorder.none,
+    prefixIcon: Icon(
+      Icons.search,
+      color: Colors.green,
+      size: 32,
+    ),
+    hintText: "Search for area, street name...",
+  ),
+
+  debounceTime: 400,
+
+  getPlaceDetailWithLatLng: (prediction) {
+    print(prediction.lat);
+    print(prediction.lng);
+  },
+
+  itemClick: (prediction) async {
+    searchController.text =
+        prediction.description ?? "";
+
+    SharedPreferences prefs =
+        await SharedPreferences.getInstance();
+
+    await prefs.setString(
+      "user_location",
+      prediction.description ?? "",
+    );
+
+    Navigator.pop(context);
+  },
+          ),
+),
                 const SizedBox(height: 30),
 
                 Container(
@@ -141,25 +221,32 @@ class _LocationSelectionViewState
                                 FontWeight.w600,
                           ),
                         ),
-                        subtitle: 
-                        Text(currentLocation),
-                        trailing: const Icon(
+                        subtitle: Text(
+                          currentLocation,
+                           maxLines: 2,
+                           overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                            color: Colors.black54,
+                            fontSize: 14,
+                           ),
+                          ),
+                          trailing: const Icon(
                           Icons.chevron_right,
-                        ),
-                        // onTap: () {},
+                    ),
 
-onTap: () async {
+                      onTap: () async {
+                        await getCurrentLocation();
 
-  SharedPreferences prefs =
-      await SharedPreferences.getInstance();
+                       SharedPreferences prefs =
+                            await SharedPreferences.getInstance();
 
-  await prefs.setString(
-    "user_location",
-    currentLocation,
-  );
+                     await prefs.setString(
+                            "user_location",
+                            currentLocation,
+                        );
 
-  Navigator.pop(context);
-},
+                       Navigator.pop(context);
+                      },
 
 
                       ),
@@ -184,7 +271,14 @@ onTap: () async {
                         trailing: const Icon(
                           Icons.chevron_right,
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AddAddressView(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),
@@ -203,18 +297,38 @@ onTap: () async {
 
                 const SizedBox(height: 20),
 
-                buildAddressCard(
-                  "Home",
-                  "CIDCO, Aurangabad",
-                ),
+                // buildAddressCard(
+                //   "Home",
+                //   "CIDCO, Aurangabad",
+                // ),
 
-                const SizedBox(height: 20),
+                // const SizedBox(height: 20),
 
-                buildAddressCard(
-                  "Office",
-                  "Waluj MIDC",
-                ),
+                // buildAddressCard(
+                //   "Office",
+                //   "Waluj MIDC",
+                // ),
 
+                 ListView.builder(
+                 shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                      itemCount: savedAddresses.length,
+                      itemBuilder: (context, index) {
+
+                     List<String> data =
+                     savedAddresses[index].split("|");
+
+                     return Padding(
+                     padding: const EdgeInsets.only(
+                     bottom: 15,
+                   ),
+                    child: buildAddressCard(
+                   data[0], // Home / Office
+                      "${data[1]}, ${data[2]}",
+                    ),
+                );
+                  },
+                     ),
                 const SizedBox(height: 30),
 
                 const Text(
@@ -317,4 +431,4 @@ onTap: () async {
       ),
     );
   }
-}
+    }

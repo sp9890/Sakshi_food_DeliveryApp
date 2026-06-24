@@ -4,12 +4,11 @@ import 'package:food_delivery/common_widget/round_textfield.dart';
 
 import '../../common_widget/menu_item_row.dart';
 import '../more/my_order_view.dart';
-import 'item_details_view.dart';
 import '../../common/cart_item.dart';
 import '../../common/cart_service.dart';
 import '../../services/menu_service.dart';
+import 'item_details_view.dart';
 
-import '../../common_widget/menu_item_row.dart';
 
 class MenuItemsView extends StatefulWidget {
   final Map mObj;
@@ -157,7 +156,7 @@ Future<void> loadMenu() async {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MyOrderView()));
+                                builder: (context) => ItemDetailsView(mObj: widget.mObj)));
                       },
                       icon: Image.asset(
                         "assets/img/shopping_cart.png",
@@ -251,25 +250,34 @@ Future<void> loadMenu() async {
 //   );
 // },
 
-onTap: () {
+// onTap: () {
 
-  CartService.addItem(
-    CartItem(
-      name: mObj["Food Name"].toString(),
-      image: mObj["image"].toString(),
-      price: (mObj["Price (?)"] as num).toDouble(),
-    ),
-  );
+//   CartService.addItem(
+//     CartItem(
+//       name: mObj["Food Name"].toString(),
+//       image: mObj["image"].toString(),
+//       price: (mObj["Price (?)"] as num).toDouble(),
+//     ),
+//   );
 
-  ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(
-      content: Text(
-        "${mObj["Food Name"]} added to cart",
-      ),
-    ),
-  );
-},
-           
+//   ScaffoldMessenger.of(context).showSnackBar(
+//     SnackBar(
+//       content: Text(
+//         "${mObj["Food Name"]} added to cart",
+//       ),
+//     ),
+//   );
+// },
+          onTap: () {
+              Navigator.push(
+             context,
+              MaterialPageRoute(
+                builder: (context) => ItemDetailsView(
+               mObj: mObj,
+               ),
+              ),
+                );
+              }, 
 
 
                   

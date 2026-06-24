@@ -6,7 +6,11 @@ import '../../common/color_extension.dart';
 import '../more/my_order_view.dart';
 
 class ItemDetailsView extends StatefulWidget {
-  const ItemDetailsView({super.key});
+     final Map mObj;
+      const ItemDetailsView({
+    super.key,
+    required this.mObj,
+      });
 
   @override
   State<ItemDetailsView> createState() => _ItemDetailsViewState();

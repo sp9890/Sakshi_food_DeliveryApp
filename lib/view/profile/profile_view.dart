@@ -10,6 +10,8 @@ import '../../common/color_extension.dart';
 import '../../common_widget/round_textfield.dart';
 import '../more/my_order_view.dart';
 
+import '../more/my_orders_history_view.dart';
+
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
 
@@ -262,6 +264,25 @@ class _ProfileViewState extends State<ProfileView> {
                   controller: txtConfirmPassword,
                 ),
               ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: RoundButton(
+              title: 'My Orders',
+              onPressed: () {
+            Navigator.push(
+             context,
+             MaterialPageRoute(
+              builder: (context) =>
+              const MyOrdersHistoryView(),
+                 ),
+               );
+             },
+           ),
+          ),
+              const SizedBox(height: 15),
+
+
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

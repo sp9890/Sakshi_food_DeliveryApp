@@ -14,6 +14,8 @@ import '../more/my_order_view.dart';
 import '../location/location_selection_view.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -22,18 +24,23 @@ class HomeView extends StatefulWidget {
   State<HomeView> createState() => _HomeViewState();
 }
 
-
-
 class _HomeViewState extends State<HomeView> {
   TextEditingController txtSearch = TextEditingController();
 
+  List filteredMostPopArr = [];
+  List filteredRecentArr = [];
+
   String currentLocation = "Current Location";
 
-    @override
+  @override
   void initState() {
-    super.initState();
-    loadLocation();
-  }
+  super.initState();
+
+  loadLocation();
+
+  filteredMostPopArr = List.from(mostPopArr);
+  filteredRecentArr = List.from(recentArr);
+}
 
   Future<void> loadLocation() async {
     SharedPreferences prefs =
@@ -46,85 +53,192 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  Future<void> getCurrentLocation() async {
+ Position position = await Geolocator.getCurrentPosition(
+  locationSettings: const LocationSettings(
+    accuracy: LocationAccuracy.high,
+  ),
+);
+  List<Placemark> placemarks =
+      await placemarkFromCoordinates(
+    position.latitude,
+    position.longitude,
+  );
+
+  Placemark place = placemarks.first;
+
+  setState(() {
+    currentLocation =
+        "${place.locality}, ${place.administrativeArea}";
+  });
+
+  SharedPreferences prefs =
+      await SharedPreferences.getInstance();
+
+  await prefs.setString(
+    "user_location",
+    currentLocation,
+  );
+}
+
+   void searchFood(String value) {
+  setState(() {
+
+    filteredMostPopArr = mostPopArr.where((item) {
+      return item["name"]
+          .toString()
+          .toLowerCase()
+          .contains(value.toLowerCase());
+    }).toList();
+
+    filteredRecentArr = recentArr.where((item) {
+      return item["name"]
+          .toString()
+          .toLowerCase()
+          .contains(value.toLowerCase());
+    }).toList();
+
+  });
+  }
+
+
   List catArr = [
-    {"image": "assets/img/cat_offer.png", "name": "Offers"},
-    {"image": "assets/img/cat_sri.png", "name": "Sri Lankan"},
-    {"image": "assets/img/cat_3.png", "name": "Italian"},
-    {"image": "assets/img/cat_4.png", "name": "Indian"},
-  ];
-
+  {"image": "assets/img/cat_offer.png", "name": "Breakfast"},
+  {"image": "assets/img/cat_sri.png", "name": "Snacks"},
+  {"image": "assets/img/cat_3.png", "name": "Soups"},
+  {"image": "assets/img/cat_4.png", "name": "Pizza"},
+  {"image": "assets/img/cat_offer.png", "name": "Punjabi"},
+  {"image": "assets/img/cat_sri.png", "name": "Chinese"},
+  {"image": "assets/img/cat_3.png", "name": "Rice"},
+  {"image": "assets/img/cat_4.png", "name": "Beverages"},
+];
+  // List popArr = [
+  //   {
+  //     "image": "assets/img/res_1.png",
+  //     "name": "Minute by tuk tuk",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  //   {
+  //     "image": "assets/img/res_2.png",
+  //     "name": "Café de Noir",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  //   {
+  //     "image": "assets/img/res_3.png",
+  //     "name": "Bakes by Tella",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  // ];
   List popArr = [
-    {
-      "image": "assets/img/res_1.png",
-      "name": "Minute by tuk tuk",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-    {
-      "image": "assets/img/res_2.png",
-      "name": "Café de Noir",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-    {
-      "image": "assets/img/res_3.png",
-      "name": "Bakes by Tella",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-  ];
-
+  {
+    "image": "assets/img/res_1.png",
+    "name": "Krushlila Pure Veg",
+    "rate": "4.8",
+    "rating": "250",
+    "type": "Restaurant",
+    "food_type": "Pure Veg"
+  },
+];
+  // List mostPopArr = [
+  //   {
+  //     "image": "assets/img/m_res_1.png",
+  //     "name": "Minute by tuk tuk",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  //   {
+  //     "image": "assets/img/m_res_2.png",
+  //     "name": "Café de Noir",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  // ];
   List mostPopArr = [
-    {
-      "image": "assets/img/m_res_1.png",
-      "name": "Minute by tuk tuk",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-    {
-      "image": "assets/img/m_res_2.png",
-      "name": "Café de Noir",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-  ];
+  {
+    "image": "assets/img/m_res_1.png",
+    "name": "Paneer Butter Masala",
+    "rate": "4.9",
+    "rating": "150",
+    "type": "Punjabi",
+    "food_type": "Veg"
+  },
+  {
+    "image": "assets/img/m_res_2.png",
+    "name": "Veg Biryani",
+    "rate": "4.8",
+    "rating": "120",
+    "type": "Rice",
+    "food_type": "Veg"
+  },
+];
+
+  // List recentArr = [
+  //   {
+  //     "image": "assets/img/item_1.png",
+  //     "name": "Mulberry Pizza by Josh",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  //   {
+  //     "image": "assets/img/item_2.png",
+  //     "name": "Barita",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  //   {
+  //     "image": "assets/img/item_3.png",
+  //     "name": "Pizza Rush Hour",
+  //     "rate": "4.9",
+  //     "rating": "124",
+  //     "type": "Cafa",
+  //     "food_type": "Western Food"
+  //   },
+  // ];
+
 
   List recentArr = [
-    {
-      "image": "assets/img/item_1.png",
-      "name": "Mulberry Pizza by Josh",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-    {
-      "image": "assets/img/item_2.png",
-      "name": "Barita",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-    {
-      "image": "assets/img/item_3.png",
-      "name": "Pizza Rush Hour",
-      "rate": "4.9",
-      "rating": "124",
-      "type": "Cafa",
-      "food_type": "Western Food"
-    },
-  ];
+  {
+    "image": "assets/img/item_1.png",
+    "name": "Tomato Soup",
+    "rate": "4.8",
+    "rating": "80",
+    "type": "Soup",
+    "food_type": "Veg"
+  },
+  {
+    "image": "assets/img/item_2.png",
+    "name": "Paneer Tikka",
+    "rate": "4.9",
+    "rating": "100",
+    "type": "Starter",
+    "food_type": "Veg"
+  },
+  {
+    "image": "assets/img/item_3.png",
+    "name": "Masala Dosa",
+    "rate": "4.9",
+    "rating": "200",
+    "type": "South Indian",
+    "food_type": "Veg"
+  },
+];
 
   @override
   Widget build(BuildContext context) {
@@ -201,9 +315,10 @@ class _HomeViewState extends State<HomeView> {
             const LocationSelectionView(),
       ),
     );
-
-    loadLocation();
+      loadLocation();
   },
+
+  
   child: Text(
     currentLocation,
     style: TextStyle(
@@ -234,6 +349,7 @@ class _HomeViewState extends State<HomeView> {
                 child: RoundTextfield(
                   hintText: "Search Food",
                   controller: txtSearch,
+                  onChanged: searchFood,
                   left: Container(
                     alignment: Alignment.center,
                     width: 30,
@@ -295,9 +411,10 @@ class _HomeViewState extends State<HomeView> {
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 15),
-                  itemCount: mostPopArr.length,
+                 //temCount: mostPopArr.length,
+                  itemCount: filteredMostPopArr.length,
                   itemBuilder: ((context, index) {
-                    var mObj = mostPopArr[index] as Map? ?? {};
+                    var mObj = filteredMostPopArr[index] as Map? ?? {};
                     return MostPopularCell(
                       mObj: mObj,
                       onTap: () {},
@@ -316,9 +433,11 @@ class _HomeViewState extends State<HomeView> {
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                itemCount: recentArr.length,
+               //temCount: recentArr.length,
+                itemCount: filteredRecentArr.length,
                 itemBuilder: ((context, index) {
-                  var rObj = recentArr[index] as Map? ?? {};
+                //var rObj = recentArr[index] as Map? ?? {};
+                  var rObj = filteredRecentArr[index] as Map? ?? {};
                   return RecentItemRow(
                     rObj: rObj,
                     onTap: () {},
