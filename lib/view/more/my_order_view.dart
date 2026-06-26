@@ -277,9 +277,9 @@ class _MyOrderViewState extends State<MyOrderView> {
         IconButton(
           icon: const Icon(Icons.remove_circle),
           onPressed: () {
-            setState(() {
+            //setState(() {
               cart.decreaseQty(index);
-            });
+            
           },
         ),
 
@@ -293,9 +293,9 @@ class _MyOrderViewState extends State<MyOrderView> {
         IconButton(
           icon: const Icon(Icons.add_circle),
           onPressed: () {
-            setState(() {
+           // setState(() {
               cart.increaseQty(index);
-            });
+            
           },
         ),
       ],
