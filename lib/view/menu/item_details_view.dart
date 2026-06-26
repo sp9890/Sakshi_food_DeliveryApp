@@ -5,7 +5,9 @@ import 'package:food_delivery/common_widget/round_icon_button.dart';
 import '../../common/color_extension.dart';
 import '../more/my_order_view.dart';
 import '../../common/cart_item.dart';
-import '../../common/cart_service.dart';
+//import '../../common/cart_service.dart';
+import 'package:provider/provider.dart';
+import '../../providers/cart_provider.dart';
 
 class ItemDetailsView extends StatefulWidget {
      final Map mObj;
@@ -481,13 +483,20 @@ void initState() {
                                                             "assets/img/shopping_add.png",
                                                         color: TColor.primary,
                                                         onPressed: () {
-                                                           CartService.addItem(
-                                                             CartItem(
-                                                      name: widget.mObj["Food Name"],
-                                                      image: widget.mObj["image"],
-                                                      price: price,
-                                               ),
-                                               );
+  context.read<CartProvider>().addItem(
+  CartItem(
+    name: widget.mObj["Food Name"],
+    image: widget.mObj["image"],
+    price: price,
+  ),
+);
+                                              //              CartService.addItem(
+                                              //                CartItem(
+                                              //         name: widget.mObj["Food Name"],
+                                              //         image: widget.mObj["image"],
+                                              //         price: price,
+                                              //  ),
+                                              //  );
 
                                         ScaffoldMessenger.of(context).showSnackBar(
                                             SnackBar(
