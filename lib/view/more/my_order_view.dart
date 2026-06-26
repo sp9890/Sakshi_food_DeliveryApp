@@ -4,7 +4,9 @@ import 'package:food_delivery/common_widget/round_button.dart';
 
 import 'checkout_view.dart';
 
-import '../../common/cart_service.dart';
+//import '../../common/cart_service.dart';
+import 'package:provider/provider.dart';
+import '../../providers/cart_provider.dart';
 import 'my_order_view.dart';
 
 
@@ -28,20 +30,23 @@ class _MyOrderViewState extends State<MyOrderView> {
    
 
 
-    final itemArr = CartService.cartItems;
+   // final itemArr = CartService.cartItems;
 
      double get subTotal {
     double total = 0;
 
-    for (var item in CartService.cartItems) {
-      total += item.price * item.qty;
-    }
+    // for (var item in CartService.cartItems) {
+    //   total += item.price * item.qty;
+    // }
 
     return total;
   }
 
   @override
   Widget build(BuildContext context) {
+    final cart = context.watch<CartProvider>();
+     final itemArr = cart.cartItems;
+
     return Scaffold(
       backgroundColor: TColor.white,
       body: SingleChildScrollView(
@@ -273,7 +278,7 @@ class _MyOrderViewState extends State<MyOrderView> {
           icon: const Icon(Icons.remove_circle),
           onPressed: () {
             setState(() {
-              CartService.decreaseQty(index);
+              cart.decreaseQty(index);
             });
           },
         ),
@@ -289,7 +294,7 @@ class _MyOrderViewState extends State<MyOrderView> {
           icon: const Icon(Icons.add_circle),
           onPressed: () {
             setState(() {
-              CartService.increaseQty(index);
+              cart.increaseQty(index);
             });
           },
         ),
@@ -362,7 +367,7 @@ class _MyOrderViewState extends State<MyOrderView> {
                         ),
                         Text(
                           // "₹68",
-                           "₹${subTotal.toStringAsFixed(0)}",
+                           "₹${cart.subTotal.toStringAsFixed(0)}",
                           style: TextStyle(
                               color: TColor.primary,
                               fontSize: 13,
@@ -416,7 +421,7 @@ class _MyOrderViewState extends State<MyOrderView> {
                         ),
                         Text(
                           // "₹70",
-                           "₹${(subTotal + 40).toStringAsFixed(0)}",
+                           "₹${(cart.subTotal + 40).toStringAsFixed(0)}",
                           style: TextStyle(
                               color: TColor.primary,
                               fontSize: 22,
