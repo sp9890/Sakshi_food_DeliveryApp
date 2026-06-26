@@ -4,6 +4,8 @@ import 'package:food_delivery/common_widget/round_icon_button.dart';
 
 import '../../common/color_extension.dart';
 import '../more/my_order_view.dart';
+import '../../common/cart_item.dart';
+import '../../common/cart_service.dart';
 
 class ItemDetailsView extends StatefulWidget {
      final Map mObj;
@@ -17,9 +19,21 @@ class ItemDetailsView extends StatefulWidget {
 }
 
 class _ItemDetailsViewState extends State<ItemDetailsView> {
-  double price = 15;
+  late double price;
   int qty = 1;
   bool isFav = false;
+
+
+@override
+void initState() {
+  super.initState();
+
+  price = double.tryParse(
+        widget.mObj["Price (?)"].toString(),
+      ) ??
+      0;
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +44,8 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
         alignment: Alignment.topCenter,
         children: [
           Image.asset(
-            "assets/img/detail_top.png",
+            //"assets/img/detail_top.png",
+             widget.mObj["image"],
             width: media.width,
             height: media.width,
             fit: BoxFit.cover,
@@ -72,7 +87,7 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 25),
                                 child: Text(
-                                  "Tandoori Chicken Pizza",
+                              widget.mObj["Food Name"].toString(),
                                   style: TextStyle(
                                       color: TColor.primaryText,
                                       fontSize: 22,
@@ -119,7 +134,7 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                                           height: 4,
                                         ),
                                         Text(
-                                          " 4 Star Ratings",
+                                          widget.mObj["Category"].toString(),
                                           style: TextStyle(
                                               color: TColor.primary,
                                               fontSize: 11,
@@ -465,7 +480,23 @@ class _ItemDetailsViewState extends State<ItemDetailsView> {
                                                         icon:
                                                             "assets/img/shopping_add.png",
                                                         color: TColor.primary,
-                                                        onPressed: () {}),
+                                                        onPressed: () {
+                                                           CartService.addItem(
+                                                             CartItem(
+                                                      name: widget.mObj["Food Name"],
+                                                      image: widget.mObj["image"],
+                                                      price: price,
+                                               ),
+                                               );
+
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                            SnackBar(
+                                            content: Text(
+                                         "${widget.mObj["Food Name"]} added to cart",
+                                       ),
+                                       ),
+                                        );
+                                                        }),
                                                   )
                                                 ],
                                               )),
