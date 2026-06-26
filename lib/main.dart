@@ -10,6 +10,7 @@ import 'package:food_delivery/view/main_tabview/main_tabview.dart';
 // import 'package:food_delivery/view/on_boarding/startup_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+
 import 'common/globs.dart';
 import 'common/my_http_overrides.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,6 +27,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+
+
+import 'package:provider/provider.dart';
+import 'package:food_delivery/providers/cart_provider.dart';
 
 SharedPreferences? prefs;
 
@@ -86,7 +92,22 @@ FirebaseMessaging.onMessage.listen(
     ServiceCall.userPayload = Globs.udValue(Globs.userPayload);
   }
 
-  runApp( const MyApp(defaultHome:  StartupView(),));
+
+
+runApp(
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => CartProvider(),
+      ),
+    ],
+    child: const MyApp(
+      defaultHome: StartupView(),
+    ),
+  ),
+);
+  
+  //runApp( const MyApp(defaultHome:  StartupView(),)); when iam working on cart 
    //runApp( const MyApp(defaultHome: LocationPermissionView(),));
 
 
