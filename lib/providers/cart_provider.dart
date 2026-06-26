@@ -4,13 +4,19 @@ import '../common/cart_item.dart';
 class CartProvider extends ChangeNotifier {
   final List<CartItem> _cartItems = [];
 
-  List<CartItem> get cartItems => _cartItems;
+  List<CartItem> get cartItems => List.unmodifiable(_cartItems);
 
   int get totalItems =>
       _cartItems.fold(0, (sum, item) => sum + item.qty);
 
+  int get totalUniqueItems => _cartItems.length;
+
   double get subTotal =>
       _cartItems.fold(0, (sum, item) => sum + (item.price * item.qty));
+
+  bool containsItem(String name) {
+    return _cartItems.any((item) => item.name == name);
+  }
 
   void addItem(CartItem item) {
     int index = _cartItems.indexWhere((e) => e.name == item.name);
@@ -36,6 +42,11 @@ class CartProvider extends ChangeNotifier {
       _cartItems.removeAt(index);
     }
 
+    notifyListeners();
+  }
+
+  void removeItem(int index) {
+    _cartItems.removeAt(index);
     notifyListeners();
   }
 
