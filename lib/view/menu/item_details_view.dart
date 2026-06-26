@@ -490,13 +490,7 @@ void initState() {
     price: price,
   ),
 );
-                                              //              CartService.addItem(
-                                              //                CartItem(
-                                              //         name: widget.mObj["Food Name"],
-                                              //         image: widget.mObj["image"],
-                                              //         price: price,
-                                              //  ),
-                                              //  );
+                                           
 
                                         ScaffoldMessenger.of(context).showSnackBar(
                                             SnackBar(

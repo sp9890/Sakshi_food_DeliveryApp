@@ -5,7 +5,7 @@ import 'package:food_delivery/common_widget/round_textfield.dart';
 import '../../common_widget/menu_item_row.dart';
 import '../more/my_order_view.dart';
 import '../../common/cart_item.dart';
-import '../../common/cart_service.dart';
+
 import '../../services/menu_service.dart';
 import 'item_details_view.dart';
 
@@ -224,50 +224,7 @@ Future<void> loadMenu() async {
     },
 
 
-                    // onTap: () {
-                    //   Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const ItemDetailsView()),
-                    //   );
-                    // },
-                  // onTap: () {
 
-//   CartService.addItem(
-//     CartItem(
-//       name: mObj["name"].toString(),
-//       image: mObj["image"].toString(),
-//       price: mObj["price"] as double,
-//     ),
-//   );
-
-//   ScaffoldMessenger.of(context).showSnackBar(
-//     SnackBar(
-//       content: Text(
-//         "${mObj["name"]} added to cart",
-//       ),
-//     ),
-//   );
-// },
-
-// onTap: () {
-
-//   CartService.addItem(
-//     CartItem(
-//       name: mObj["Food Name"].toString(),
-//       image: mObj["image"].toString(),
-//       price: (mObj["Price (?)"] as num).toDouble(),
-//     ),
-//   );
-
-//   ScaffoldMessenger.of(context).showSnackBar(
-//     SnackBar(
-//       content: Text(
-//         "${mObj["Food Name"]} added to cart",
-//       ),
-//     ),
-//   );
-// },
           onTap: () {
               Navigator.push(
              context,

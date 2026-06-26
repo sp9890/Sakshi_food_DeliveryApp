@@ -30,14 +30,13 @@ class _MyOrderViewState extends State<MyOrderView> {
    
 
 
-   // final itemArr = CartService.cartItems;
+  
 
      double get subTotal {
     double total = 0;
 
-    // for (var item in CartService.cartItems) {
-    //   total += item.price * item.qty;
-    // }
+ 
+   
 
     return total;
   }

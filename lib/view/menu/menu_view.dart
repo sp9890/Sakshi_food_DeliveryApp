@@ -4,6 +4,7 @@ import '../../common/color_extension.dart';
 import '../../common_widget/round_textfield.dart';
 import '../more/my_order_view.dart';
 import 'menu_items_view.dart';
+import '../../common_widget/cart_icon.dart';
 
 class MenuView extends StatefulWidget {
   const MenuView({super.key});
@@ -127,19 +128,20 @@ List menuArr = [
                               fontSize: 20,
                               fontWeight: FontWeight.w800),
                         ),
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const MyOrderView()));
-                          },
-                          icon: Image.asset(
-                            "assets/img/shopping_cart.png",
-                            width: 25,
-                            height: 25,
-                          ),
-                        ),
+                        // IconButton(
+                        //   onPressed: () {
+                        //     Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) => const MyOrderView()));
+                        //   },
+                        //   icon: Image.asset(
+                        //     "assets/img/shopping_cart.png",
+                        //     width: 25,
+                        //     height: 25,
+                        //   ),
+                        // ),
+                        const CartIcon(),
                       ],
                     ),
                   ),

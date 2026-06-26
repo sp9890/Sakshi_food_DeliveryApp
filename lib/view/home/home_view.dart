@@ -16,6 +16,7 @@ import '../location/location_selection_view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+import '../../common_widget/cart_icon.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -263,19 +264,21 @@ class _HomeViewState extends State<HomeView> {
                           fontSize: 20,
                           fontWeight: FontWeight.w800),
                     ),
-                    IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const MyOrderView()));
-                      },
-                      icon: Image.asset(
-                        "assets/img/shopping_cart.png",
-                        width: 25,
-                        height: 25,
-                      ),
-                    ),
+                    // IconButton(
+                    //   onPressed: () {
+                    //     Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => const MyOrderView()));
+                    //   },
+                    //   icon: Image.asset(
+                    //     "assets/img/shopping_cart.png",
+                    //     width: 25,
+                    //     height: 25,
+                    //   ),
+                    // ),
+                    const CartIcon(),
+
                   ],
                 ),
               ),

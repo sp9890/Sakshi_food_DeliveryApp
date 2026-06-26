@@ -6,7 +6,9 @@ import 'change_address_view.dart';
 import 'checkout_message_view.dart';
 import '../../services/order_service.dart';
 
-import '../../common/cart_service.dart';
+//import '../../common/cart_service.dart';
+import 'package:provider/provider.dart';
+import '../../providers/cart_provider.dart';
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -69,7 +71,7 @@ double total = 0;
 void initState() {
   super.initState();
   loadProfile();
-  calculateTotals();
+ // calculateTotals();
 
 }
 Future<void> loadProfile() async {
@@ -89,19 +91,12 @@ Future<void> loadProfile() async {
 
 
 
- void calculateTotals() {
-    subtotal = 0;
-
-    for (var item in CartService.cartItems) {
-      subtotal += item.price * item.qty;
-    }
-
-    total = subtotal + deliveryFee;
-  }
 
 
   @override
   Widget build(BuildContext context) {
+    final cart = context.watch<CartProvider>();
+
     return Scaffold(
       backgroundColor: TColor.white,
       body: SingleChildScrollView(
@@ -351,7 +346,7 @@ Future<void> loadProfile() async {
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                          "₹${subtotal.toStringAsFixed(0)}",
+                          "₹${cart.subTotal.toStringAsFixed(0)}",
 
                           style: TextStyle(
                               color: TColor.primaryText,
@@ -430,7 +425,8 @@ Future<void> loadProfile() async {
                               fontWeight: FontWeight.w500),
                         ),
                         Text(
-                            "₹${total.toStringAsFixed(0)}",
+                           //"₹${total.toStringAsFixed(0)}",
+                           "₹${(cart.subTotal + deliveryFee).toStringAsFixed(0)}",
 
                           style: TextStyle(
                               color: TColor.primaryText,
@@ -458,7 +454,8 @@ Future<void> loadProfile() async {
                       
   List<Map<String, dynamic>> orderItems = [];
   double subtotal = 0;
-  for (var item in CartService.cartItems) {
+ 
+   for (var item in cart.cartItems){
     orderItems.add({
       "name": item.name,
       "price": item.price,
@@ -475,9 +472,9 @@ Future<void> loadProfile() async {
   //   deliveryFee: deliveryFee,
   //   total: total,
   // );
-  
-  print("Cart Items Count: ${CartService.cartItems.length}");
-  print(CartService.cartItems);
+ 
+  print("Cart Items Count: ${cart.cartItems.length}");
+  print(cart.cartItems);
   print("ORDER ITEMS BEFORE SAVE = $orderItems");
 
   
@@ -495,9 +492,9 @@ Future<void> loadProfile() async {
 );
 
 
-CartService.cartItems.clear();
+cart.clearCart();
 
-calculateTotals();
+// calculateTotals();
 
 setState(() {});
                       showModalBottomSheet(
